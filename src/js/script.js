@@ -44,3 +44,19 @@ const observer = new IntersectionObserver((entries)=>{
 })
 const hiddenElemente = document.querySelectorAll(".hidden");
 hiddenElemente.forEach((el)=> observer.observe(el));
+
+//Carrosel de Imagens
+
+let Imagens = ['./src/img/img_sec.jpg','./src/img/img_sec2.jpg','./src/img/img_sec3.jpg']
+let index = 0;
+let time = 3000;
+
+function slideShow(){
+    document.getElementById('imagem_slide').src = Imagens[index];
+    index ++
+    if (index == Imagens.length){
+        index = 0;
+    }
+    setTimeout('slideShow()', time)
+}
+slideShow();
