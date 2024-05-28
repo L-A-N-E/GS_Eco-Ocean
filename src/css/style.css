@@ -6,7 +6,9 @@
     list-style: none;
     font-family: "Kameron", serif;
 }
-
+html{
+    scroll-behavior: smooth ;
+}
 :root {
     --bg-color: #011826;
     --sec-color: #042940;
@@ -99,10 +101,10 @@ header {
     justify-content: space-between;
     align-items: flex-start;
 }
-#conteudo-sobre h1, #conteudo-sobre p, #modal-sobre h1, #modal-sobre p, #conteudo-tec{
+#conteudo-sobre h1, #conteudo-sobre p, #modal-sobre h1, #modal-sobre p, .conteudos{
     color: var(--font-color);
 }
-#conteudo-sobre h1, #modal-sobre h1, #conteudo-tec h1{
+#conteudo-sobre h1, #modal-sobre h1, .conteudos h1{
     font-size: 3.5rem;
 }
 #conteudo-sobre p , #modal-sobre p{
@@ -148,11 +150,11 @@ header {
     width: 50vh;
 }
 /* Seção Tecnologias Utilizadas */
-#tecnologias{
+.secoes{
     width: 100%;
     padding: 2% 9%;
 }
-#conteudo-tec{
+.conteudos{
     background-color: var(--sec-color);
     padding: 4% ;
     display: flex;
@@ -161,7 +163,7 @@ header {
     align-items: flex-start;
     gap: 2rem;
 }
-#conteudo-tec h2{
+.conteudos h2{
     color: var(--sec-color);
     font-size: 2rem;
 }
@@ -192,6 +194,24 @@ header {
 #img-card_site img{
     width: 120px;
 }
+/* Seção Objetivos */
+.cards-obj{
+    background-color: var(--sec-color2);
+    padding: 5%;
+    min-width: 10%;
+    max-width: 30%;
+    height: 400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.cards-obj p{
+    font-size: 2rem;
+    text-align: center;
+    color: var(--sec-color);
+    font-weight: 800;
+}
 /* Barra de Rolagem */
 ::-webkit-scrollbar {
     width: 7px; 
@@ -215,7 +235,7 @@ header {
     display: none;
 }
 @media (max-width:1260px){
-    #conteudo-tec{
+    .conteudos{
         text-align: center;
     }
     .cards{
@@ -228,6 +248,10 @@ header {
     }
     .cards-tec{
         width: 50%;
+    }
+    .cards-obj{
+        min-width: 50%;
+        max-width: 70%;
     }
 }
 @media (max-width:1100px){
