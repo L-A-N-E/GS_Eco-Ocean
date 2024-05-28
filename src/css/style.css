@@ -271,7 +271,17 @@ header {
 .cards-dia img{
     height: 50%;
 }
-
+/* Footer */
+footer{
+    height: 30vh;
+    background-color: var(--sec-color);
+    color: var(--sec-color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
 /* Barra de Rolagem */
 ::-webkit-scrollbar {
     width: 7px; 
