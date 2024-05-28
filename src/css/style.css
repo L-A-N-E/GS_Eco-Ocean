@@ -111,7 +111,7 @@ header {
     font-size: 1.4rem;
 }
 #conteudo-sobre a{
-    padding: 2% 3%;
+    padding: 3% 4.5%;
     background-color: var(--sec-color2);
     border-radius: 15px;
     color: var(--sec-color);
