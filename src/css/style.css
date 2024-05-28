@@ -212,6 +212,38 @@ header {
     color: var(--sec-color);
     font-weight: 800;
 }
+/* Seção Público*/
+#card-pub{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.cards-pub{
+    background-color: var(--sec-color2);
+    padding: 5%;
+    min-width: 10%;
+    max-width: 40%;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    gap: 1rem;
+}
+.cards-pub h1{
+    color: var(--sec-color);
+    font-size: 2rem;
+}
+.cards-pub p{
+    color: var(--sec-color);
+    font-size: 1.5rem;
+}
+.cards-pub img{
+    height: 50%;
+}
 /* Barra de Rolagem */
 ::-webkit-scrollbar {
     width: 7px; 
@@ -238,7 +270,7 @@ header {
     .conteudos{
         text-align: center;
     }
-    .cards{
+    .cards, #card-pub{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -249,7 +281,7 @@ header {
     .cards-tec{
         width: 50%;
     }
-    .cards-obj{
+    .cards-obj, .cards-pub{
         min-width: 50%;
         max-width: 70%;
     }
@@ -294,6 +326,9 @@ header {
     header{
         background: transparent;
         backdrop-filter: blur(0px);
+    }
+    .cards-pub img{
+        height: 30%;
     }
 }
 @media (max-width:610px){
