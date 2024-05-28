@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-        <img src="./src/img/fundo_home.jpg" id="bg-image">
         <header>
             <!--Nav Desktop-->
             <nav id="nav-desktop">
@@ -20,13 +19,41 @@
                     <li><a href="">Benefícios</a></li>
                     <li><a href="">Dia-A-Dia</a></li>
                 </ul>
+            </nav>
+            <div id="abrir-menu">
+                <img src="./src/img/menu_icone.png" alt="menu" onclick="openMenu()">
+            </div>
+            <!--Nav Mobile-->
+            <nav id="nav-mobile">
+                <ul>
+                    <li onclick="closeMenu()"><img src="./src/img/fechar_icone.png"></li>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Tecnologias Utilizadas</a></li>
+                    <li><a href="">Objetivos</a></li>
+                    <li><a href="">Público</a></li>
+                    <li><a href="">Benefícios</a></li>
+                    <li><a href="">Dia-A-Dia</a></li>
+                </ul>
             </nav> 
         </header>
     <!--Seção Home-->
     <section id="home">
-            <h1 id="text-home-h1">Eco-Ocean</h1>
+        <video autoplay muted loop id="background-video">
+            <source src="./src/img/fundo_home.mp4" type="video/mp4">
+        </video>
+        <h1 id="text-home-h1">Eco-Ocean</h1>
     </section>
+    <section id="sobre">
+        <div id="conteudo-sobre">
+            <h1>Sobre</h1>
+            <p>Nosso grupo propõe o desenvolvimento de um programa integrado a um dispositivo de radar para localizar lixo no oceano. O programa detectará lixos flutuantes ou submersos e exibirá esses dados em um sonar. Os operadores dos navios de limpeza poderão registrar os detritos detectados, incluindo informações como localização e data. Esses registros serão armazenados em um banco de dados e visualizados em um site dedicado a mostrar essas informações para o público. Além de auxiliar na limpeza dos oceanos, o programa terá impacto positivo no meio ambiente e promoverá a sustentabilidade.</p>
+            <a>Saiba mais sobre o problema</a>
+        </div>
+        <div id="img-sobre">
 
+        </div>
+    </section>
     <script src="./src/js/script.js"></script>
 </body>
 </html>

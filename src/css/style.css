@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+    font-family: "Kameron", serif;
 }
 
 :root {
@@ -18,6 +20,7 @@ body{
 }
 header {
     width: 100%;
+    position: fixed;
     padding: 2.5rem;
     background-color: rgba(0, 0, 0, 0.323);
     backdrop-filter: blur(10px);
@@ -34,7 +37,7 @@ header {
     text-decoration: none;
     text-transform: uppercase;
     color: var(--font-color);
-    font-size: 1.3rem;
+    font-size: 1rem;
     transition: 1s ease;
 }
 #nav-desktop ul li {
@@ -45,30 +48,83 @@ header {
     transform: scale(1.2);
     transition: 1s ease;
 }
-#bg-image{
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    filter: brightness(80%);
-}
 #home {
-    height: 89.2vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover; 
 }
-
-#text-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+#abrir-menu{
+    display: none;
 }
 
 #text-home-h1 {
     font-size: 220px;
     text-transform: uppercase;
-    mix-blend-mode: overlay; 
+    mix-blend-mode: overlay;
+    color: rgba(255, 255, 255, 0.447);
+    text-shadow: 0px 5px 10px rgba(255, 255, 255, 0.469);
     text-align: center;
+    z-index: 1;
+}
+
+#nav-mobile{
+    display: none;
+}
+@media (max-width:800px){
+    #nav-desktop{
+        display: none;
+    }
+    #nav-mobile{
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.26);
+        backdrop-filter: blur(10px);
+        height: 100vh;
+        padding: 20px;
+        z-index: 1000;
+    }
+    #text-home-h1 {
+        font-size: 5rem;
+    }
+    #nav-mobile ul{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #nav-mobile ul li a{
+        text-decoration: none;
+        color: var(--font-color);
+        font-size: 1.2rem;
+    }
+    #abrir-menu{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    header{
+        background: transparent;
+        backdrop-filter: blur(0px);
+    }
+}
+@media (max-width:610px){
+    #text-home-h1 {
+        font-size: 4.5rem;
+    }
+}
+@media (max-width:450px){
+    #nav-mobile{
+       width: 100%;
+    }
 }
