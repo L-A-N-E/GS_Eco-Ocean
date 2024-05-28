@@ -77,8 +77,90 @@ header {
     text-align: center;
     z-index: 1;
 }
-
 #nav-mobile{
+    display: none;
+}
+#sobre{
+    height: 100vh;
+    display: flex;
+    padding: 7% 9%;
+    gap: 2rem;
+}
+#conteudo-sobre{
+    background-color: var(--sec-color);
+    padding: 4% ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#conteudo-sobre h1, #conteudo-sobre p, #modal-sobre h1, #modal-sobre p{
+    color: var(--font-color);
+}
+#conteudo-sobre h1, #modal-sobre h1{
+    font-size: 6rem;
+}
+#conteudo-sobre p , #modal-sobre p{
+    font-size: 1.5rem;
+}
+#conteudo-sobre a{
+    padding: 2% 3%;
+    background-color: var(--sec-color2);
+    border-radius: 15px;
+    color: var(--sec-color);
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: 1s ease;
+}
+#conteudo-sobre a:hover, #modal-sobre a:hover{
+    transform: scale(1.1);
+    transition: 1s ease;
+}
+#modal-sobre{
+    background-color: var(--sec-color);
+    padding: 4% ;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#modal-sobre a{
+    padding: 3% 4.5%;
+    background-color: var(--sec-color2);
+    border-radius: 15px;
+    color: var(--sec-color);
+    text-transform: uppercase;
+    font-weight: 800;
+    transition: 1s ease;
+}
+#img-sobre{
+    padding: 1%;
+    background-color: var(--sec-color2);
+}
+#img-sobre img{
+    height: 100%;
+}
+/* Barra de Rolagem */
+::-webkit-scrollbar {
+    width: 7px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 0px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--font-color);
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--sec-color2);
+}
+
+::-webkit-scrollbar-button {
     display: none;
 }
 @media (max-width:800px){
