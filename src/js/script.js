@@ -62,7 +62,9 @@ function slideShow(){
 slideShow();
 
 //Validação de campos
-function submitar(){
+function submitar(event){
+    event.preventDefault(); // Impede o envio padrão do formulário
+
     let email = document.getElementById('email-forms').value;
     if (email == "" || !email.includes('@') || !email.includes('.com')){
         Swal.fire({
