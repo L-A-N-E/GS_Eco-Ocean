@@ -278,10 +278,38 @@ footer{
     background-color: var(--sec-color);
     color: var(--sec-color2);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-size: 1.2rem;
     text-transform: uppercase;
+}
+strong{
+    color: var(--font-color);
+    font-weight: 900;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+#botao-forms{
+    background-color: var(--sec-color2);
+    color: var(--bg-color);
+    text-transform: uppercase;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: ease 1s;
+}
+#botao-forms:hover{
+    transform: scale(1.1);
+    transition: ease 1s;
+}
+#email-forms{
+    padding: 5px;
+    width: 80%;
 }
 /* Barra de Rolagem */
 ::-webkit-scrollbar {
@@ -381,6 +409,16 @@ footer{
     .cards-pub img, .cards-dia img{
         height: 30%;
     }
+    footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .forms{
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
 }
 @media (max-width:630px){
     .cards-dia h1{
@@ -409,6 +447,6 @@ footer{
 }
 @media (max-width:450px){
     #nav-mobile{
-       width: 100%;
+        width: 100%;
     }
 }

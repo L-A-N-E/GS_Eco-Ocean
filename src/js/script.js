@@ -60,3 +60,22 @@ function slideShow(){
     setTimeout('slideShow()', time)
 }
 slideShow();
+
+//Validação de campos
+function submitar(){
+    let email = document.getElementById('email-forms').value;
+    if (email == "" || !email.includes('@') || !email.includes('.com')){
+        Swal.fire({
+            title: "Preencha o Campo!",
+            icon: "info",
+            button: "Ok",
+        });
+    }
+    else{
+        Swal.fire({
+            title: "Formulário Enviado!",
+            icon: "success",
+            button: "Ok",
+        });
+    }
+}

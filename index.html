@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./src/css/style.css">
     <!--Icone da página-->
     <link rel="shortcut icon" href="./src/img/icone_site.png">
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
         <header>
@@ -160,7 +162,16 @@
     </section>
     <!--Footer-->
     <footer>
-        <h5>2024@Todos os Direitos Reservados - ECO-AFFAIRS</h5>
+        <div>
+            <h5>2024@Todos os Direitos Reservados - ECO-AFFAIRS</h5>
+        </div>
+        <div>
+            <form class="forms">
+                <h4>Para mais informações sobre o projeto: <strong>Inscreva - se!</strong></h4>
+                <input type="email" placeholder="Digite seu email:" id="email-forms">
+                <button onclick="submitar()" id="botao-forms">Enviar</button>
+            </form>
+        </div>
     </footer>
     <script src="./src/js/script.js"></script>
 </body>
